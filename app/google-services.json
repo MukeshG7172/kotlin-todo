@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "163595904579",
+    "project_id": "login-f2273",
+    "storage_bucket": "login-f2273.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163595904579:android:9352df54461ef14178d6f6",
+        "android_client_info": {
+          "package_name": "dev.mukesh.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163595904579-q8c0qov0essftuvpldua2ac25dqo2hn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.mukesh.login",
+            "certificate_hash": "5c1b984af02caf2953c28b2944d2a28d8cac3502"
+          }
+        },
+        {
+          "client_id": "163595904579-b15nm7miuv3el7bovgl6olb98u4elev1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6WB8XwD6TxUZgzQemcdkG4MZCy8Qhrn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163595904579-b15nm7miuv3el7bovgl6olb98u4elev1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
