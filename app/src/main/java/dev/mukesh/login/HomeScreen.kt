@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -52,7 +53,7 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
             ) {
-                Icon(Icons.Default.ExitToApp, contentDescription = "Logout")
+                Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = "Logout")
             }
         }
 
@@ -460,7 +461,7 @@ fun AddTodoDialog(
                         expanded = expanded,
                         onDismissRequest = { expanded = false }
                     ) {
-                        Priority.values().forEach { priorityOption ->
+                        Priority.entries.forEach { priorityOption ->
                             DropdownMenuItem(
                                 text = { Text(priorityOption.displayName) },
                                 onClick = {
@@ -548,7 +549,7 @@ fun EditTodoDialog(
                         expanded = expanded,
                         onDismissRequest = { expanded = false }
                     ) {
-                        Priority.values().forEach { priorityOption ->
+                        Priority.entries.forEach { priorityOption ->
                             DropdownMenuItem(
                                 text = { Text(priorityOption.displayName) },
                                 onClick = {

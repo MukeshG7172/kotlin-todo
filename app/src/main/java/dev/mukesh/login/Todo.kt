@@ -150,38 +150,6 @@ class TodoManager {
             }
     }
 
-    fun getFilteredAndSortedTodos(
-        filterType: FilterType = FilterType.ALL,
-        sortBy: SortBy = SortBy.CREATED_DATE
-    ): List<TodoItem> {
-        val filtered = when (filterType) {
-            FilterType.ALL -> _todos.toList()
-            FilterType.PENDING -> _todos.filter { !it.isCompleted }
-            FilterType.COMPLETED -> _todos.filter { it.isCompleted }
-            FilterType.HIGH_PRIORITY -> _todos.filter { it.priority == Priority.HIGH }
-            FilterType.MEDIUM_PRIORITY -> _todos.filter { it.priority == Priority.MEDIUM }
-            FilterType.LOW_PRIORITY -> _todos.filter { it.priority == Priority.LOW }
-        }
-
-        return when (sortBy) {
-            SortBy.TITLE -> filtered.sortedBy { it.title.lowercase() }
-            SortBy.PRIORITY -> filtered.sortedByDescending { it.priority.value }
-            SortBy.CREATED_DATE -> filtered.sortedByDescending { it.createdAt }
-            SortBy.UPDATED_DATE -> filtered.sortedByDescending { it.updatedAt }
-            SortBy.COMPLETION -> filtered.sortedBy { it.isCompleted }
-        }
-    }
-
-    fun searchTodos(query: String): List<TodoItem> {
-        if (query.trim().isEmpty()) return _todos.toList()
-
-        val searchQuery = query.trim().lowercase()
-        return _todos.filter { todo ->
-            todo.title.lowercase().contains(searchQuery) ||
-                    todo.description.lowercase().contains(searchQuery)
-        }
-    }
-
     suspend fun addTodo(
         title: String,
         description: String = "",
